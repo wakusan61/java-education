@@ -39,9 +39,11 @@ boolean型やint型などの一定範囲の値を オートボクシングでラ
   System.out.println(integer1 == integer2); // オブジェクト自体の同一性の比較で true になる
   System.out.println(integer1.intValue() == integer2.intValue()); // 値を比較しているため true
 ```
-|ラッパークラスのキャッシュ範囲|
-|----|----|----|
+ラッパークラスのキャッシュ範囲
+
+
 |プリミティブ型|ラッパークラス	|キャッシュ範囲|
+|----|----|----|
 |boolean、byte	|Boolean、Byte	|全て|
 |char|Character|U+0000～U+007F|
 |short、int|Short、Integer	|-128～128|
