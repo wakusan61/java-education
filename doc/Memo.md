@@ -30,3 +30,12 @@ int intVal = intObj;   // Integerオブジェクト -> int 値に変換：オー
 ```
 
 ### ラッパーオブジェクト同士の値の比較を行いたい場合は 明示的にプリミティブ型に変換する必要があります。
+
+boolean型やint型などの一定範囲の値を オートボクシングでラッパークラスオブジェクトに変換する場合、キャッシュ機能が働きます。キャッシュ機能によって、同じプリミティブ値に対して同じラッパークラスオブジェクトが返される。
+
+```java
+  Integer integer1 = 100; 
+  Integer integer2 = 100; // //int のキャッシュは -128〜128 のため同一のオブジェクトが返される
+  System.out.println(integer1 == integer2); // オブジェクト自体の同一性の比較で true になる
+  System.out.println(integer1.intValue() == integer2.intValue()); // 値を比較しているため true
+```
